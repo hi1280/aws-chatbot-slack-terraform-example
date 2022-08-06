@@ -1,0 +1,39 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": [
+        "iam:*",
+        "s3:GetBucketPolicy",
+        "ssm:*",
+        "sts:*",
+        "kms:*",
+        "cognito-idp:GetSigningCertificate",
+        "ec2:GetPasswordData",
+        "ecr:GetAuthorizationToken",
+        "gamelift:RequestUploadCredentials",
+        "gamelift:GetInstanceAccess",
+        "lightsail:DownloadDefaultKeyPair",
+        "lightsail:GetInstanceAccessDetails",
+        "lightsail:GetKeyPair",
+        "lightsail:GetKeyPairs",
+        "redshift:GetClusterCredentials",
+        "storagegateway:DescribeChapCredentials"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "lambda:invokeAsync",
+        "lambda:invokeFunction"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
